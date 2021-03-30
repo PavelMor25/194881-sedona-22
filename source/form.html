@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Отзыв о Седоне</title>
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">Главная</li>
+          <li class="main-nav__item">Фото и видео</li>
+          <li class="main-nav__item">Форма отзыва</li>
+          <li class="main-nav__item">Htmlacademy</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Отзыв</h1>
+    <div class="wrapper">
+      <section class="promo">
+        <div class="wrapper-small">
+          <h2 class="promo__title">Оставьте свой отзыв</h2>
+          <img class="promo__image promo__short-image" src="img/sedona.svg" width="229" height="39" src="Sedona">
+          <p class="promo__info">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+      </section>
+
+      <section class="review">
+        <h2 class="visually-hidden">Форма отзыва</h2>
+        <form class="form-review">
+          <fieldset class="form-review__fieldset name-fieldset">
+            <legend class="form-review__legend name-fieldset__title">Представьтесь:</legend>
+            <label class="name-fieldset__label">Имя<sup>*</sup>:<input class="name-fieldset__input first-name-input" type="text" name="first-name" placeholder="Петр"></label>
+            <label class="name-fieldset__label">Фамилия<sup>*</sup>:<input class="name-fieldset__input second-name-input" type="text" name="second-name" placeholder="Иванов"></label>
+            <label class="name-fieldset__label">Отчество:<input class="name-fieldset__input patronymic-name-input" type="text" name="patronymic-name" placeholder="Александрович"></label>
+          </fieldset>
+          <fieldset class="form-review__fieldset contacts-fieldset">
+            <legend class="form-review__legend contacts-fieldset__title">Контактная информация:</legend>
+            <label class="contacts-fieldset__label" for="tel-id"></label><input class="contacts-fieldset__input tel-input" type="tel" name="tel" id="tel-id" placeholder="Введите телефон">
+            <label class="contacts-fieldset__label" for="email-id"></label><input class="contacts-fieldset__input email-input" type="email" name="email" id="email-id" placeholder="Введите e-mail">
+          </fieldset>
+          <fieldset class="form-review__fieldset impression-fieldset">
+            <legend class="form-review__legend impression-fieldset__title">Ваше общее впечатление:</legend>
+            <input class="impression-fieldset__input" type="radio" name="impression" id="good-id" value="good" checked><label class="impression-fieldset__label" for="good-id">Скорее положительное</label>
+            <input class="impression-fieldset__input" type="radio" name="impression" id="bad-id" value="bad"><label class="impression-fieldset__label" for="bad-id">Скорее отрицательное</label>
+            <input class="impression-fieldset__input" type="radio" name="impression" id="difficult-id" value="difficult"><label class="impression-fieldset__label" for="difficult-id">Затрудняюсь ответить</label>
+          </fieldset>
+          <fieldset class="form-review__fieldset attractions-fieldset">
+            <legend class="form-review__legend attractions-fieldset__title"></legend>
+            <input class="attractions-fieldset__input" type="checkbox" name="bridge" id="birdge-id" checked><label class="attractions-fieldset__label" for="birdge-id">Мост Дьявола</label>
+            <input class="attractions-fieldset__input" type="checkbox" name="mountain" id="mountain-id" checked><label class="attractions-fieldset__label" for="mountain-id">Гора-Колокол</label>
+            <input class="attractions-fieldset__input" type="checkbox" name="park" id="park-id" checked><label class="attractions-fieldset__label" for="park-id">Слайд-парк</label>
+            <input class="attractions-fieldset__input" type="checkbox" name="rock" id="rock-id"><label class="attractions-fieldset__label" for="rock-id">Красные скалы</label>
+          </fieldset>
+          <fieldset class="form-review__fieldset emotion-fieldset">
+            <legend class="form-review__legend emotion-fieldset__title">Опишите свои эмоции:</legend>
+            <textarea class="emotion-fieldset__textarea">Опишите подробно все свои восторги</textarea>
+          </fieldset>
+          <button class="form-review__button" type="submit">Отправить отзыв</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="wrapper">
+      <p class="page-footer__tag">#Visitsedona</p>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter">Мы в Twitter</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook">Мы в Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube">Мы в Youtube</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link">
+          <span class="copyright__text">Разработано</span>
+          <svg class="copyright__icon" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="copyright__icon-path" d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
