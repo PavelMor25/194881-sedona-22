@@ -40,49 +40,69 @@
       <section class="review">
         <h2 class="visually-hidden">Форма отзыва</h2>
         <form class="form-review">
-          <fieldset class="form-review__fieldset name-fieldset">
-            <legend class="name-fieldset__title">Представьтесь:</legend>
-            <label class="name-fieldset__label">Имя<sup>*</sup>:<input class="name-fieldset__input first-name-input"
-                type="text" name="first-name" placeholder="Петр"></label>
-            <label class="name-fieldset__label">Фамилия<sup>*</sup>:<input
-                class="name-fieldset__input second-name-input" type="text" name="second-name"
-                placeholder="Иванов"></label>
-            <label class="name-fieldset__label">Отчество:<input class="name-fieldset__input patronymic-name-input"
-                type="text" name="patronymic-name" placeholder="Александрович"></label>
+          <fieldset class="form-review__fieldset">
+            <p class="form-review__title">Представьтесь:</p>
+            <div class="form-rewiew__input-section">
+            <label class="form-review__label" for="first-name-id">Имя<sup>*</sup>:</label>
+            <input class="form-review__input first-name-input" type="text" name="first-name" id="first-name-id" placeholder="Петр">
+            </div>
+            <div class="form-rewiew__input-section">
+            <label class="form-review__label" for="second-name-id">Фамилия<sup>*</sup>:</label>
+            <input class="form-review__input second-name-input" type="text" name="second-name" id="second-name-id" placeholder="Иванов">
+            </div>
+            <div class="form-rewiew__input-section">
+            <label class="form-review__label" for="patronymic-name-id">Отчество:</label>
+            <input class="form-review__input patronymic-name-input" type="text" name="patronymic-name" id="patronymic-name-id" placeholder="Александрович">
+            </div>
           </fieldset>
-          <fieldset class="form-review__fieldset contacts-fieldset">
-            <legend class="contacts-fieldset__title">Контактная информация:</legend>
-            <label class="contacts-fieldset__label" for="tel-id"></label><input
-              class="contacts-fieldset__input tel-input" type="tel" name="tel" id="tel-id"
-              placeholder="Введите телефон">
-            <label class="contacts-fieldset__label" for="email-id"></label><input
-              class="contacts-fieldset__input email-input" type="email" name="email" id="email-id"
-              placeholder="Введите e-mail">
+          <fieldset class="form-review__fieldset">
+            <p class="form-review__title">Контактная информация:</p>
+            <div class="form-rewiew__input-section">
+              <label class="form-review__label" for="tel-id">Контактный телефон*:</label>
+              <input class="form-review__input tel-input" type="tel" name="tel" id="tel-id" placeholder="Введите телефон">
+            </div>
+            <div class="form-rewiew__input-section">
+              <label class="form-review__label" for="email-id">Электронная почта*:</label>
+              <input class="form-review__input email-input" type="email" name="email" id="email-id" placeholder="Введите e-mail">
+            </div>
           </fieldset>
-          <fieldset class="form-review__fieldset impression-fieldset">
-            <legend class="impression-fieldset__title">Ваше общее впечатление:</legend>
-            <input class="impression-fieldset__input" type="radio" name="impression" id="good-id" value="good"
-              checked><label class="impression-fieldset__label" for="good-id">Скорее положительное</label>
-            <input class="impression-fieldset__input" type="radio" name="impression" id="bad-id" value="bad"><label
-              class="impression-fieldset__label" for="bad-id">Скорее отрицательное</label>
-            <input class="impression-fieldset__input" type="radio" name="impression" id="difficult-id"
-              value="difficult"><label class="impression-fieldset__label" for="difficult-id">Затрудняюсь
-              ответить</label>
+          <fieldset class="form-review__fieldset">
+            <p class="form-review__title">Ваше общее впечатление:</p>
+            <div class="form-rewiew__input-section">
+              <input class="form-review__input input-radio" type="radio" name="impression" id="good-id" value="good" checked>
+              <label class="form-review__label" for="good-id">Скорее положительное</label>
+            </div>
+            <div class="form-rewiew__input-section">
+              <input class="form-review__input input-radio" type="radio" name="impression" id="bad-id" value="bad">
+              <label class="form-review__label" for="bad-id">Скорее отрицательное</label>
+            </div>
+            <div class="form-rewiew__input-section">
+              <input class="form-review__input input-radio" type="radio" name="impression" id="difficult-id" value="difficult">
+              <label class="form-review__label" for="difficult-id">Затрудняюсь ответить</label>
+            </div>
           </fieldset>
-          <fieldset class="form-review__fieldset attractions-fieldset">
-            <legend class="attractions-fieldset__title"></legend>
-            <input class="attractions-fieldset__input" type="checkbox" name="bridge" id="birdge-id" checked><label
-              class="attractions-fieldset__label" for="birdge-id">Мост Дьявола</label>
-            <input class="attractions-fieldset__input" type="checkbox" name="mountain" id="mountain-id" checked><label
-              class="attractions-fieldset__label" for="mountain-id">Гора-Колокол</label>
-            <input class="attractions-fieldset__input" type="checkbox" name="park" id="park-id" checked><label
-              class="attractions-fieldset__label" for="park-id">Слайд-парк</label>
-            <input class="attractions-fieldset__input" type="checkbox" name="rock" id="rock-id"><label
-              class="attractions-fieldset__label" for="rock-id">Красные скалы</label>
+          <fieldset class="form-review__fieldset">
+            <p class="form-review__title">посещенные достопримечательности:</p>
+            <div class="form-rewiew__input-section">
+              <input class="form-review__input input-checkbox" type="checkbox" name="bridge" id="birdge-id" checked>
+              <label class="form-review__label" for="birdge-id">Мост Дьявола</label>
+            </div>
+            <div class="form-rewiew__input-section">
+              <input class="form-review__input input-checkbox" type="checkbox" name="mountain" id="mountain-id" checked>
+              <label class="form-review__label" for="mountain-id">Гора-Колокол</label>
+            </div>
+            <div class="form-rewiew__input-section">
+              <input class="form-review__input input-checkbox" type="checkbox" name="park" id="park-id" checked>
+              <label class="form-review__label" for="park-id">Слайд-парк</label>
+            </div>
+            <div class="form-rewiew__input-section">
+              <input class="form-review__input input-checkbox" type="checkbox" name="rock" id="rock-id">
+              <label class="form-review__label" for="rock-id">Красные скалы</label>
+            </div>
           </fieldset>
-          <fieldset class="form-review__fieldset emotion-fieldset">
-            <legend class="emotion-fieldset__title">Опишите свои эмоции:</legend>
-            <textarea class="emotion-fieldset__textarea">Опишите подробно все свои восторги</textarea>
+          <fieldset class="form-review__fieldset">
+            <p class="form-review__title">Опишите свои эмоции:</p>
+            <textarea class="form-review__textarea">Опишите подробно все свои восторги</textarea>
           </fieldset>
           <button class="form-review__button" type="submit">Отправить отзыв</button>
         </form>
