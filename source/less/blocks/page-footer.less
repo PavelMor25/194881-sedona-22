@@ -2,14 +2,28 @@
   background-color: @basic-white;
   padding-top: 38.5px;
   padding-bottom: 23px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .page-footer__tag {
   .text-parametr(21px; 700; 26px);
   margin: 0;
   margin-bottom: 33.5px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-footer__social {
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }

@@ -1,10 +1,29 @@
 .reason {
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.reason--right-text {
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 2fr 1fr;
+  }
 }
 
 .reason__info {
+  text-align: center;
   background: @basic-blue;
   padding: 55px 0 39px 0;
+}
+
+.reason__image--left-image {
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 
 .reason__title {
