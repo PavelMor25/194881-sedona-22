@@ -1,5 +1,6 @@
 .form-review {
   background: transparent;
+  padding: 0 20px;
 }
 
 .form-review__fieldset {
@@ -8,12 +9,27 @@
   margin: 0;
   background: transparent;
   border: none;
+  box-sizing: border-box;
+}
+
+.form-review__fieldset:last-of-type {
+  margin-bottom: 50px;
 }
 
 .form-review__title {
+  text-align: center;
   .text-parametr(18px; 700; 26px);
   margin: 0;
   padding: 0;
+}
+
+.form-rewiew__input-section {
+  display: flex;
+}
+
+.form-rewiew__input-section--column {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-review__label {
@@ -40,19 +56,59 @@
 }
 
 .form-review__textarea {
+  box-sizing: border-box;
+  width: 100%;
   padding: 12px 21px;
+  height: 160px;
 }
 
 .form-review__button {
   font-family: inherit;
   .text-parametr(21px; 700; 26px);
   color: @basic-white;
+  box-sizing: border-box;
+  width: 100%;
   padding: 18.5px 32px 13.5px 32px;
   border: none;
   background: @basic-blue;
 }
 
 .form-review__desc-required {
+  display: none;
   .text-parametr();
   color: @extra-black;
+}
+
+@media (min-width: @tablet-width) {
+  .form-review {
+    padding: 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-review__fieldset {
+    padding: 0;
+    margin-bottom: 50px;
+    width: 100%;
+    order: 2;
+  }
+
+  .form-review__fieldset--half {
+    width: 50%;
+  }
+
+  .form-review__fieldset--first {
+    order: 1;
+  }
+
+  .form-review__button {
+    order: 2;
+    width: auto;
+  }
+
+  .form-review__desc-required {
+    display: block;
+    order: 2;
+  }
 }
