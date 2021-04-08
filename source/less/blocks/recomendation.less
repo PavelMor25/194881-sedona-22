@@ -1,13 +1,10 @@
 .recomendation {
+  text-align: center;
   background-color: @basic-white;
 }
 
 .recomendation__list {
   .clear-list();
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-  }
 }
 
 .recomendation__title {
@@ -19,4 +16,17 @@
 .recomendation__desc {
   .text-parametr();
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .recomendation__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .recomendation__item {
+    box-sizing: border-box;
+    width: calc(100% / 3);
+    padding: 0 26px;
+  }
 }
