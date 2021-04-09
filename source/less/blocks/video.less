@@ -1,6 +1,11 @@
+.video {
+  text-align: center;
+}
+
 .video__slogan {
   .text-parametr(18px; 700; 26px);
   margin: 0;
+  margin-bottom: 12px;
   padding: 0;
 }
 
@@ -8,4 +13,10 @@
   .text-parametr(14px; 400; 24px);
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .video__slogan {
+    font-size: 30px;
+  }
 }

@@ -1,7 +1,9 @@
 .main-nav__list {
   .clear-list();
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .main-nav__link {
@@ -23,7 +25,11 @@
   }
 
   .main-nav__item {
-    width: 159px;
+    width: 153px;
+  }
+
+  .main-nav__item:nth-of-type(3) {
+    margin-left: auto;
   }
 
   .main-nav__link {
@@ -39,5 +45,9 @@
 @media (min-width: @desktop-width) {
   .main-nav__item {
     width: 239px;
+  }
+
+  .main-nav__item:nth-of-type(3) {
+    margin-left: 244px;
   }
 }

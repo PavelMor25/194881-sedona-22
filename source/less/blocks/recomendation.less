@@ -1,5 +1,5 @@
 .recomendation {
-  text-align: center;
+  text-align: left;
   background-color: @basic-white;
 }
 
@@ -20,13 +20,18 @@
 
 @media (min-width: @tablet-width) {
   .recomendation__list {
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
   }
 
   .recomendation__item {
     box-sizing: border-box;
-    width: calc(100% / 3);
+    width: 100% / 3;
     padding: 0 26px;
+  }
+
+  .recomendation__title {
+    font-size: 21px;
   }
 }
