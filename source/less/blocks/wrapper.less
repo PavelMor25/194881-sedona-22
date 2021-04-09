@@ -1,9 +1,18 @@
 .wrapper {
   background-color: @basic-white;
+  max-width: @mobile-width-container;
+  margin: 0 auto;
+  padding: 0;
+}
 
-  @media (min-width: @desktop-width) {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0;
+@media (min-width: @tablet-width) {
+  .wrapper {
+    max-width: @tablet-width-container;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrapper {
+    max-width: @desktop-width-container;
   }
 }

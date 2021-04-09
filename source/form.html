@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Отзыв о Седоне</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -33,7 +34,7 @@
 
       <section class="intro">
         <h2 class="visually-hidden">Ваш отзыв</h2>
-        <p class="intro__slogan">Оставьте свой отзыв</p>
+        <p class="intro__slogan intro__slogan--big-text">Оставьте свой отзыв</p>
         <p class="intro__info">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
           достопримечательностях</p>
       </section>
@@ -41,7 +42,7 @@
       <section class="review">
         <h2 class="visually-hidden">Форма отзыва</h2>
         <form class="form-review">
-          <fieldset class="form-review__fieldset">
+          <fieldset class="form-review__fieldset form-review__fieldset--half">
             <p class="form-review__title">Представьтесь:</p>
             <div class="form-rewiew__input-section">
             <label class="form-review__label" for="first-name-id">Имя<sup>*</sup>:</label>
@@ -58,16 +59,16 @@
           </fieldset>
           <fieldset class="form-review__fieldset">
             <p class="form-review__title">Контактная информация:</p>
-            <div class="form-rewiew__input-section">
+            <div class="form-rewiew__input-section form-rewiew__input-section--column">
               <label class="form-review__label" for="tel-id">Контактный телефон*:</label>
               <input class="form-review__input tel-input" type="tel" name="tel" id="tel-id" placeholder="Введите телефон">
             </div>
-            <div class="form-rewiew__input-section">
+            <div class="form-rewiew__input-section form-rewiew__input-section--column">
               <label class="form-review__label" for="email-id">Электронная почта*:</label>
               <input class="form-review__input email-input" type="email" name="email" id="email-id" placeholder="Введите e-mail">
             </div>
           </fieldset>
-          <fieldset class="form-review__fieldset">
+          <fieldset class="form-review__fieldset form-review__fieldset--half form-review__fieldset--first">
             <p class="form-review__title">Ваше общее впечатление:</p>
             <div class="form-rewiew__input-section">
               <input class="form-review__input input-radio visually-hidden" type="radio" name="impression" id="good-id" value="good" checked>
