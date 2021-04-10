@@ -22,4 +22,14 @@
   color: @basic-white;
   padding: 14.5px 32px 17.5px 32px;
   background-color: @basic-blue;
+
+  &:hover,
+  &:focus {
+    background: @extra-blue;
+  }
+
+  &:active {
+    background: @extra-blue-dark;
+    color: fade(@basic-white, 30%);
+  }
 }
