@@ -1,10 +1,52 @@
 .main-nav__list {
+  position: relative;
   .clear-list();
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
+  background: @basic-white;
 }
+
+.main-nav__item {
+  position: relative;
+  top: -54px;
+  display: none;
+}
+
+.main-nav--opened .main-nav__item {
+  display: block;
+}
+
+.main-nav--opened .main-nav__toggle-icon-menu {
+  display: none;
+}
+
+.main-nav--opened .main-nav__toggle {
+  right: 13px;
+  top: 17px;
+}
+
+.main-nav--closed .main-nav__item {
+  display: none;
+}
+
+.main-nav--closed .main-nav__toggle-icon-cross {
+  display: none;
+}
+
+.main-nav--closed .main-nav__toggle {
+  right: 13px;
+  bottom: 8px;
+}
+
+// .main-nav--nojs .main-nav__item {
+//   display: block;
+// }
+
+// .main-nav--nojs .main-nav__toggle {
+//   display: none;
+// }
 
 .main-nav__link {
   .text-parametr(18px; 700; 40px);
@@ -13,10 +55,31 @@
   padding: 10px 0 5px 0;
   display: flex;
   justify-content: center;
+
+  &:hover {
+    background: @extra-blue;
+  }
+
+  &:active {
+    background: @extra-blue-dark;
+  }
 }
 
 .main-nav__toggle {
-  display: block;
+  position: absolute;
+  z-index: 5;
+  border: none;
+  background: transparent;
+
+  &:hover .main-nav__toggle-icon-menu,
+  &:hover .main-nav__toggle-icon-cross {
+    opacity: 0.6;
+  }
+
+  &:active .main-nav__toggle-icon-menu,
+  &:active .main-nav__toggle-icon-cross {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -25,6 +88,8 @@
   }
 
   .main-nav__item {
+    display: block;
+    top: 0;
     width: 153px;
   }
 
@@ -33,8 +98,34 @@
   }
 
   .main-nav__link {
+    .text-parametr(14px; 700; 26px);
     color: @basic-black;
     background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: @basic-blue;
+      background: transparent;
+    }
+
+    &:active {
+      color: @basic-black;
+      opacity: 0.3;
+    }
+  }
+
+  .main-nav__link--current {
+    color: @basic-brown;
+
+    &:hover,
+    &:focus {
+      color: @extra-brown;
+    }
+
+    &:active {
+      color: @basic-brown;
+      opacity: 0.3;
+    }
   }
 
   .main-nav__toggle {

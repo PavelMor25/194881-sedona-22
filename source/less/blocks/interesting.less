@@ -1,7 +1,6 @@
 .interesting {
   background-color: @basic-white;
-  padding-top: 32px;
-  padding-bottom: 49px;
+  padding: 32px 5px 49px 5px;
   text-align: center;
 }
 
@@ -17,9 +16,46 @@
   margin-bottom: 27px;
 }
 
+.interesting__desc br {
+  display: none;
+}
+
 .interesting__link-search {
   .text-parametr(21px; 700; 26px);
   color: @basic-white;
   padding: 14.5px 32px 17.5px 32px;
   background-color: @basic-blue;
+
+  &:hover,
+  &:focus {
+    background: @extra-blue;
+  }
+
+  &:active {
+    background: @extra-blue-dark;
+    color: fade(@basic-white, 30%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .interesting {
+    padding-top: 57px;
+  }
+
+  .interesting__title {
+    font-size: 30px;
+    margin-bottom: 37px;
+  }
+
+  .interesting__desc {
+    margin-bottom: 55px;
+  }
+
+  .interesting__desc br {
+    display: inline;
+  }
+
+  .interesting__link-search {
+    padding: 14.5px 135px 17.5px 135px;
+  }
 }
