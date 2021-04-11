@@ -17,6 +17,17 @@
   padding: 0;
 }
 
+.gallery__likes {
+  display: flex;
+  align-items: center;
+}
+
+.gallery__likes-button {
+  border: none;
+  background-color: transparent;
+  margin-right: 14px;
+}
+
 @media (min-width: @tablet-width) {
   .gallery__list {
     padding: 0 60px;
@@ -38,6 +49,10 @@
     justify-content: space-between;
     padding-right: 25px;
   }
+
+  .gallery__likes-button {
+    margin-right: 9px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -47,5 +62,33 @@
 
   .gallery__item {
     width: calc(100% / 3);
+    position: relative;
+  }
+
+  .gallery__image-info {
+    width: 100%;
+    padding-right: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: @basic-white;
+    background-color: fade(@basic-black, 30%);
+  }
+
+  .gallery__image-desc {
+    margin-left: 21px;
+  }
+
+  .gallery__author {
+    color: @basic-white;
+  }
+
+  .gallery__likes {
+    margin-right: 25px;
+  }
+
+  .gallery__likes-button-icon path {
+    fill: @basic-white;
+    opacity: 1;
   }
 }

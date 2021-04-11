@@ -1,0 +1,129 @@
+.media {
+  position: relative;
+}
+
+.media__tools {
+  position: absolute;
+  width: 87.5%;
+  left: 6.25%;
+  bottom: -66px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, transparent 45px, @basic-grey 45px);
+  padding-bottom: 24px;
+}
+
+.media__img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.media__tools button {
+  border: none;
+  background: transparent;
+  order: 2;
+}
+
+.media__tools-replay {
+  margin-left: 25px;
+  margin-right: auto;
+}
+
+.media__tools-time {
+  position: relative;
+  padding-top: 45px;
+  background-color: fade(@basic-black, 60%);
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.media__tools-time-track {
+  position: absolute;
+  width: 84%;
+  height: 3px;
+  left: 22px;
+  top: 22px;
+  background: fade(@basic-white, 20%);
+}
+
+.media__tools-time-marker {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: @basic-white;
+  border-radius: 50%;
+  top: 17px;
+  left: 30%;
+}
+
+.media__tools-subtitles {
+  margin-right: 31px;
+}
+
+.media__tools-fullscreen {
+  margin-right: 23px;
+}
+
+@media (min-width: @tablet-width) {
+  .media__tools {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 93px;
+    background: fade(@basic-black, 60%) none;
+    padding: 0;
+  }
+
+  .media__tools button {
+    order: 0;
+  }
+
+  .media-icon path {
+    fill: @basic-white;
+  }
+
+  .media__tools-replay {
+    margin: 0;
+    margin-left: 35px;
+  }
+
+  .media__tools-time {
+    position: relative;
+    padding-top: 45px;
+    background-color: transparent;
+    margin: 0 42px;
+    width: 60%;
+    flex-grow: 2;
+  }
+
+  .media__tools-time-track {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 22px;
+    top: 22px;
+    background: fade(@basic-white, 20%);
+  }
+
+  .media__tools-time-marker {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: @basic-white;
+    border-radius: 50%;
+    top: 17px;
+    left: 30%;
+  }
+
+  .media__tools-subtitles {
+    margin-right: 31px;
+  }
+
+  .media__tools-fullscreen {
+    margin-right: 41px;
+  }
+}
