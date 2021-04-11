@@ -1,3 +1,23 @@
 .welcome {
-  background: url("../img/back-welcome-small.jpg") no-repeat;
+  background:
+    url("../img/icon/intro-triangle.svg") no-repeat 50% 101%,
+    url("../img/back-welcome-big.jpg") no-repeat 50% 30%;
+  display: flex;
+  padding-top: 93px;
+  padding-bottom: 85px;
+}
+
+.welcome__image {
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .welcome {
+    padding-top: 86px;
+  }
+
+  .welcome__image {
+    width: 459.5px;
+    height: 350px;
+  }
 }
