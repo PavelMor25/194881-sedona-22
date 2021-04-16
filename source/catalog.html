@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icon/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icon/icons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -61,8 +65,14 @@
         <h2 class="visually-hidden">Фотогалерея</h2>
         <ul class="gallery__list">
           <li class="gallery__item">
-            <img class="gallery__image" src="img/img-mobile/photo-1-small.jpg" width="280" height="280"
-              alt="Дорога и закат">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/img-desktop/photo-1-large.jpg 1x, img/img-desktop/photo-1-large@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/img-tablet/photo-1-middle.jpg 1x, img/img-tablet/photo-1-middle@2x.jpg 2x">
+              <img class="gallery__image" src="img/img-mobile/photo-1-small.jpg"
+                srcset="img/img-mobile/photo-1-small@2x.jpg 2x" width="280" height="280" alt="Дорога и закат">
+            </picture>
             <div class="gallery__image-info">
               <div class="gallery__image-desc">
                 <p class="gallery__name-image">Неродные просторы</p>
@@ -83,8 +93,14 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="img/img-mobile/photo-2-small.jpg" width="280" height="280"
-              alt="Кактус на фоне скал">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/img-desktop/photo-2-large.jpg 1x, img/img-desktop/photo-2-large@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/img-tablet/photo-2-middle.jpg 1x, img/img-tablet/photo-2-middle@2x.jpg 2x">
+              <img class="gallery__image" src="img/img-mobile/photo-2-small.jpg"
+                srcset="img/img-mobile/photo-2-small@2x.jpg 2x" width="280" height="280" alt="Кактус на фоне скал">
+            </picture>
             <div class="gallery__image-info">
               <div class="gallery__image-desc">
                 <p class="gallery__name-image">Местная растительность</p>
@@ -105,8 +121,14 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="img/img-mobile/photo-3-small.jpg" width="280" height="280"
-              alt="Дорога среди деревьев">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/img-desktop/photo-3-large.jpg 1x, img/img-desktop/photo-3-large@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/img-tablet/photo-3-middle.jpg 1x, img/img-tablet/photo-3-middle@2x.jpg 2x">
+              <img class="gallery__image" src="img/img-mobile/photo-3-small.jpg"
+                srcset="img/img-mobile/photo-3-small@2x.jpg 2x" width="280" height="280" alt="Дорога среди деревьев">
+            </picture>
             <div class="gallery__image-info">
               <div class="gallery__image-desc">
                 <p class="gallery__name-image">Дорога на север</p>
@@ -127,8 +149,14 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="img/img-mobile/photo-4-small.jpg" width="280" height="280"
-              alt="Скала в форме моста">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/img-desktop/photo-4-large.jpg 1x, img/img-desktop/photo-4-large@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/img-tablet/photo-4-middle.jpg 1x, img/img-tablet/photo-4-middle@2x.jpg 2x">
+              <img class="gallery__image" src="img/img-mobile/photo-4-small.jpg"
+                srcset="img/img-mobile/photo-4-small@2x.jpg 2x" width="280" height="280" alt="Скала в форме моста">
+            </picture>
             <div class="gallery__image-info">
               <div class="gallery__image-desc">
                 <p class="gallery__name-image">Мост дьявола</p>
@@ -157,10 +185,16 @@
         <p class="video__desc">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
         </p>
         <div class="video__media media">
-          <img class="media__img" src="img/img-mobile/video-small.jpg" width="320" height="201"
-            alt="Презентация Седоны">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="img/img-desktop/video-large.jpg 1x, img/img-desktop/video-large@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/img-tablet/video-middle.jpg 1x, img/img-tablet/video-middle@2x.jpg 2x">
+            <img class="media__img" src="img/img-mobile/video-small.jpg" srcset="img/img-mobile/video-small@2x.jpg 2x"
+              width="320" height="201" alt="Презентация Седоны">
+          </picture>
           <div class="media__tools">
-            <button class="media__tools-replay">
+            <button class="media__tools-replay media__tools--status">
               <span class="visually-hidden">Повтор</span>
               <svg class="media__tools-replay-icon media-icon" width="16" height="20" viewBox="0 0 16 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +207,7 @@
               <div class="media__tools-time-track"></div>
               <div class="media__tools-time-marker"></div>
             </div>
-            <button class="media__tools-subtitles">
+            <button class="media__tools-subtitles media__tools--status">
               <span class="visually-hidden">Субтитры</span>
               <svg class="media__tools-subtitles-icon media-icon" width="32" height="20" viewBox="0 0 32 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -182,7 +216,7 @@
                   fill="#5C6870" />
               </svg>
             </button>
-            <button class="media__tools-fullscreen">
+            <button class="media__tools-fullscreen media__tools--status">
               <span class="visually-hidden">Во весь экран</span>
               <svg class="media__tools-fullscreen-icon media-icon" width="20" height="20" viewBox="0 0 20 20"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -202,24 +236,24 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter">
+            <a class="social__link social__link--twitter" href="#">
               <span class="visually-hidden">Мы в Twitter</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook">
+            <a class="social__link social__link--facebook" href="#">
               <span class="visually-hidden">Мы в Facebook</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube">
+            <a class="social__link social__link--youtube" href="#">
               <span class="visually-hidden">Мы в Youtube</span>
             </a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">Разработано</span>
           <svg class="copyright__icon" width="27" height="35" viewBox="0 0 27 35" fill="none"
             xmlns="http://www.w3.org/2000/svg">
