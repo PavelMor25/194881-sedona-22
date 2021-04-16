@@ -65,6 +65,17 @@
   border: none;
   background: @basic-grey;
   padding: 18px 5px 14px 21px;
+
+  &:hover {
+    background: @extra-grey;
+  }
+
+  &:focus,
+  &:active {
+    background: @basic-white;
+    outline: 4px solid @extra-grey;
+    outline-offset: -4px;
+  }
 }
 
 .input-radio + .form-review__label {
@@ -112,6 +123,29 @@
     border-bottom: 3px solid @basic-black;
     border-left: 3px solid @basic-black;
     transform: rotate(-45deg);
+  }
+}
+
+.input-radio:hover + .form-review__label,
+.input-radio:focus + .form-review__label,
+.input-checkbox:hover + .form-review__label,
+.input-checkbox:focus + .form-review__label {
+  &::before {
+    background: @extra-grey;
+  }
+}
+
+.input-radio:active + .form-review__label,
+.input-checkbox:active + .form-review__label {
+  &::before {
+    background: @extra-grey-dark;
+  }
+}
+
+.input-radio:checked:active + .form-review__label,
+.input-checkbox:checked:active + .form-review__label {
+  &::after {
+    opacity: 0.3;
   }
 }
 

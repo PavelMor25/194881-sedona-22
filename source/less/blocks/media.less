@@ -25,6 +25,18 @@
   order: 2;
 }
 
+.media__tools--status:hover {
+  path {
+    fill: @extra-black;
+  }
+}
+
+.media__tools--status:active {
+  path {
+    opacity: 0.3;
+  }
+}
+
 .media__tools-replay {
   margin-left: 25px;
   margin-right: auto;
@@ -80,6 +92,20 @@
 
   .media__tools button {
     order: 0;
+  }
+
+  .media__tools--status:hover,
+  .media__tools--status:focus {
+    path {
+      fill: @basic-white;
+      opacity: 0.6;
+    }
+  }
+
+  .media__tools--status:active {
+    path {
+      opacity: 0.3;
+    }
   }
 
   .media-icon path {

@@ -13,13 +13,26 @@
 
 .social__link {
   position: relative;
-  background-color: @basic-blue;
+  background: @basic-blue;
   display: block;
   width: 46px;
   height: 48px;
 
   &::before {
     .pseudo();
+  }
+
+  &:hover,
+  &:focus {
+    background: @extra-blue;
+  }
+
+  &:active {
+    background: @extra-blue-dark;
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }
 
