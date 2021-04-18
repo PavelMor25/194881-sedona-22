@@ -8,13 +8,21 @@
   padding: 55px 13px 39px 13px;
 }
 
+.reason--right-text .reason__info {
+  padding-top: 39px;
+}
+
 .reason__title {
   .text-parametr(18px; 700; 26px);
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .reason__title br {
+  display: none;
+}
+
+.reason__desc br {
   display: none;
 }
 
@@ -61,6 +69,10 @@
     grid-template-columns: 2fr 1fr;
   }
 
+  .reason--right-text .reason__info {
+    padding-top: 44px;
+  }
+
   .reason__info--left-info {
     grid-column: 2;
     grid-row: 1;
@@ -69,6 +81,14 @@
 
 @media (min-width: @desktop-width) {
   .reason__info {
-    padding: 47px 52px 57px 52px;
+    padding: 47px 53px 57px 53px;
+  }
+
+  .reason__title {
+    margin-bottom: 14px;
+  }
+
+  .reason__desc br {
+    display: inline;
   }
 }

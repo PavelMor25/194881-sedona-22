@@ -1,11 +1,14 @@
 .page-footer {
   background-color: @basic-white;
-  padding-top: 38.5px;
+  padding-top: 33.5px;
   padding-bottom: 23px;
   text-align: center;
 }
 
 .page-footer__tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .text-parametr(21px; 700; 26px);
   margin: 0;
   margin-bottom: 33.5px;
@@ -19,6 +22,7 @@
   .page-footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-top: 31.5px;
   }
 
   .page-footer__tag {
@@ -27,5 +31,12 @@
 
   .page-footer__social {
     margin: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__tag {
+    justify-content: flex-start;
+    margin-left: 119px;
   }
 }

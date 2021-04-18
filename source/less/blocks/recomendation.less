@@ -1,7 +1,7 @@
 .recomendation {
   text-align: left;
   background-color: @basic-white;
-  padding: 29px 10px 40px 70px;
+  padding: 38px 10px 40px 70px;
 }
 
 .recomendation__list {
@@ -56,11 +56,19 @@
   margin: 0;
 }
 
+.recomendation__desc-break {
+  display: none;
+}
+
+.recomendation__desc-break--s-screen {
+  display: inline;
+}
+
 @media (min-width: @tablet-width) {
   .recomendation {
     padding: 0;
     padding-top: 5px;
-    padding-bottom: 55px;
+    padding-bottom: 58px;
   }
 
   .recomendation__list {
@@ -74,6 +82,14 @@
     width: 100% / 3;
     padding: 150px 26px 0 26px;
     margin-bottom: 5px;
+  }
+
+  .recomendation__desc-break {
+    display: inline;
+  }
+
+  .recomendation__desc-break--s-screen {
+    display: none;
   }
 
   .recomendation__item--souvenir {
@@ -107,5 +123,19 @@
   .recomendation__title {
     font-size: 21px;
     margin-bottom: 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .recomendation {
+    padding-bottom: 80px;
+  }
+
+  .recomendation__desc-break {
+    display: none;
+  }
+
+  .recomendation__desc-break--l-screen {
+    display: inline;
   }
 }
