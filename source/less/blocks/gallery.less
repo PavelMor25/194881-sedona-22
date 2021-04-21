@@ -2,6 +2,30 @@
   .clear-list();
   .text-parametr(14px; 700; 24px);
   padding: 0 20px;
+  border-top: 1px solid @extra-grey;
+}
+
+.gallery__item {
+  position: relative;
+  padding-top: 23px;
+  padding-bottom: 15px;
+
+  &::after {
+    .pseudo();
+    left: -20px;
+    bottom: 0;
+    width: 114%;
+    height: 1px;
+    background: @extra-grey;
+  }
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 11px;
 }
 
 .gallery__author {
@@ -12,9 +36,13 @@
 
 .gallery__name-image,
 .gallery__author,
-.gallery__number-likes {
+.gallery__likes {
   margin: 0;
   padding: 0;
+}
+
+.gallery__image-desc {
+  margin-bottom: 13px;
 }
 
 .gallery__likes {
@@ -22,43 +50,55 @@
   align-items: center;
 }
 
-.gallery__likes-button {
-  border: none;
-  background-color: transparent;
+.gallery__likes-icon {
   margin-right: 14px;
-}
-
-.gallery__image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
   .gallery__list {
-    padding: 0 60px;
+    padding: 26px 60px 0 60px;
     display: flex;
     flex-wrap: wrap;
+    border-top: none;
   }
 
   .gallery__item {
     width: 50%;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
   }
 
   .gallery__item:first-of-type {
     width: 100%;
   }
 
+  .gallery__image {
+    margin: 0;
+  }
+
+  .gallery__likes-icon {
+    margin-right: 7px;
+  }
+
 
   .gallery__image-info {
     display: flex;
     justify-content: space-between;
-    padding-right: 25px;
+    align-items: center;
+    padding: 15px 32px 17px 21px;
+    background: @basic-grey;
   }
 
-  .gallery__likes-button {
-    margin-right: 9px;
+  .gallery__item:first-of-type .gallery__image-info {
+    padding-right: 21px;
+  }
+
+  .gallery__image-desc {
+    margin: 0;
   }
 }
 
@@ -73,8 +113,10 @@
   }
 
   .gallery__image-info {
+    box-sizing: border-box;
     width: 100%;
-    padding-right: 0;
+    padding-right: 20px;
+    padding-bottom: 14px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -82,20 +124,17 @@
     background-color: fade(@basic-black, 30%);
   }
 
-  .gallery__image-desc {
-    margin-left: 21px;
-  }
-
   .gallery__author {
     color: @basic-white;
   }
 
-  .gallery__likes {
-    margin-right: 25px;
-  }
-
-  .gallery__likes-button-icon path {
+  .gallery__likes-icon {
+    margin-right: 22px;
     fill: @basic-white;
     opacity: 1;
+  }
+
+  .gallery__item:first-of-type .gallery__likes-icon {
+    margin-right: 10px;
   }
 }

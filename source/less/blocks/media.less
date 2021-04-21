@@ -26,19 +26,19 @@
 }
 
 .media__tools--status:hover {
-  path {
+  .media-icon {
     fill: @extra-black;
   }
 }
 
 .media__tools--status:active {
-  path {
+  .media-icon {
     opacity: 0.3;
   }
 }
 
 .media__tools-replay {
-  margin-left: 25px;
+  margin-left: 20px;
   margin-right: auto;
 }
 
@@ -61,20 +61,20 @@
 
 .media__tools-time-marker {
   position: absolute;
-  width: 13px;
-  height: 13px;
+  width: 10px;
+  height: 10px;
   background: @basic-white;
   border-radius: 50%;
-  top: 17px;
-  left: 30%;
+  top: 19px;
+  left: 21%;
 }
 
 .media__tools-subtitles {
-  margin-right: 31px;
+  margin-right: 20px;
 }
 
 .media__tools-fullscreen {
-  margin-right: 23px;
+  margin-right: 16px;
 }
 
 @media (min-width: @tablet-width) {
@@ -83,7 +83,7 @@
     align-items: center;
     justify-content: start;
     left: 0;
-    bottom: 0;
+    bottom: 5px;
     width: 100%;
     height: 93px;
     background: fade(@basic-black, 60%) none;
@@ -96,25 +96,25 @@
 
   .media__tools--status:hover,
   .media__tools--status:focus {
-    path {
+    .media-icon {
       fill: @basic-white;
       opacity: 0.6;
     }
   }
 
   .media__tools--status:active {
-    path {
+    .media-icon {
       opacity: 0.3;
     }
   }
 
-  .media-icon path {
+  .media-icon {
     fill: @basic-white;
   }
 
   .media__tools-replay {
     margin: 0;
-    margin-left: 35px;
+    margin-left: 30px;
   }
 
   .media__tools-time {
@@ -136,20 +136,52 @@
   }
 
   .media__tools-time-marker {
-    position: absolute;
-    width: 13px;
-    height: 13px;
-    background: @basic-white;
-    border-radius: 50%;
     top: 17px;
-    left: 30%;
+    left: 28%;
   }
 
   .media__tools-subtitles {
-    margin-right: 31px;
+    margin-right: 18px;
   }
 
   .media__tools-fullscreen {
-    margin-right: 41px;
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .media__tools-replay {
+    margin-left: 28px;
+  }
+
+  .media__tools-time {
+    position: relative;
+    padding-top: 45px;
+    background-color: transparent;
+    margin: 0 36px;
+    width: 60%;
+    flex-grow: 2;
+  }
+
+  .media__tools-time-track {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 22px;
+    top: 22px;
+    background: fade(@basic-white, 20%);
+  }
+
+  .media__tools-time-marker {
+    top: 17px;
+    left: 21%;
+  }
+
+  .media__tools-subtitles {
+    margin-right: 18px;
+  }
+
+  .media__tools-fullscreen {
+    margin-right: 37px;
   }
 }

@@ -1,15 +1,22 @@
 .intro {
   position: relative;
   background-color: @basic-white;
-  padding-top: 32px;
-  padding-bottom: 27px;
+  padding: 32px 20px 27px 20px;
   text-align: center;
+}
+
+.intro--gallery {
+  padding-bottom: 28px;
 }
 
 .intro__slogan {
   .text-parametr(18px; 700; 26px);
   margin: 0;
   margin-bottom: 35px;
+}
+
+.intro--gallery .intro__slogan {
+  margin-bottom: 28px;
 }
 
 .intro__info {
@@ -26,8 +33,16 @@
     padding: 51px 0;
   }
 
+  .intro--gallery {
+    padding-top: 65px;
+  }
+
   .intro__slogan {
     font-size: 21px;
+  }
+
+  .intro--gallery .intro__slogan {
+    margin-bottom: 32px;
   }
 
   .small-screen-transfer {
@@ -47,5 +62,10 @@
   .intro {
     padding-top: 61px;
     padding-bottom: 40px;
+  }
+
+  .intro--gallery {
+    padding-top: 99px;
+    padding-bottom: 83px;
   }
 }
