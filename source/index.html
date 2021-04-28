@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icon/icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/icon/icons/180.png">
@@ -26,17 +26,18 @@
         <button class="main-nav__toggle">
           <span class="visually-hidden">Открыть меню</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="main-nav__toggle-icon-menu" width="23" height="22">
-            <use xlink:href="img/icon/small-menu-sprite.svg#icon-menu"></use>
+            <use xlink:href="img/icon/sprite.svg#icon-menu"></use>
           </svg>
           <svg xmlns="http://www.w3.org/2000/svg" class="main-nav__toggle-icon-cross" width="23" height="23">
-            <use xlink:href="img/icon/small-menu-sprite.svg#icon-cross"></use>
+            <use xlink:href="img/icon/sprite.svg#icon-cross"></use>
           </svg>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link main-nav__link--current">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--first main-nav__link--current">Главная</a>
+          </li>
           <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма отзыва</a></li>
-          <li class="main-nav__item"><a class="main-nav__link">Html academy</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--last">Html academy</a></li>
         </ul>
       </nav>
     </header>
@@ -63,6 +64,10 @@
           <p class="reason__desc">Седона не аттракцион для туристов,<br> там течет своя жизнь</p>
         </div>
         <picture>
+          <source type="img/webp" media="(min-width: 1200px)" srcset="img/img-desktop/photo-city-large.webp 1x, img/img-desktop/photo-city-large@2x.webp 2x">
+          <source type="img/webp" media="(min-width: 768px)" srcset="img/img-tablet/photo-city-middle.webp 1x, img/img-tablet/photo-city-middle@2x.webp 2x">
+          <source type="img/webp" srcset="img/img-mobile/photo-city-small.webp 1x, img/img-mobile/photo-city-small@2x.webp 2x">
+
           <source media="(min-width: 1200px)"
             srcset="img/img-desktop/photo-city-large.jpg 1x, img/img-desktop/photo-city-large@2x.jpg 2x">
           <source media="(min-width: 768px)"
@@ -104,6 +109,10 @@
           <p class="reason__desc">Да, по нему можно пройти!<br> Если вы осмелитесь, конечно</p>
         </div>
         <picture>
+          <source type="img/webp" media="(min-width: 1200px)" srcset="img/img-desktop/photo-bridge-large.webp 1x, img/img-desktop/photo-bridge-large@2x.webp 2x">
+          <source type="img/webp" media="(min-width: 768px)" srcset="img/img-tablet/photo-bridge-middle.webp 1x, img/img-tablet/photo-bridge-middle@2x.webp 2x">
+          <source type="img/webp" srcset="img/img-mobile/photo-bridge-small.webp 1x, img/img-mobile/photo-bridge-small@2x.webp 2x">
+
           <source media="(min-width: 1200px)"
             srcset="img/img-desktop/photo-bridge-large.jpg 1x, img/img-desktop/photo-bridge-large@2x.jpg 2x">
           <source media="(min-width: 768px)"
