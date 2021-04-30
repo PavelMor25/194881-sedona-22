@@ -40,13 +40,13 @@
   bottom: 8px;
 }
 
-// .main-nav--nojs .main-nav__item {
-//   display: block;
-// }
+.main-nav--nojs .main-nav__item {
+  display: block;
+}
 
-// .main-nav--nojs .main-nav__toggle {
-//   display: none;
-// }
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
 
 .main-nav__link {
   .text-parametr(18px; 700; 40px);
@@ -111,8 +111,11 @@
     flex-direction: row;
   }
 
-  .main-nav__item {
+  .main-nav--closed .main-nav__item {
     display: block;
+  }
+
+  .main-nav__item {
     top: 0;
     width: 153px;
   }
